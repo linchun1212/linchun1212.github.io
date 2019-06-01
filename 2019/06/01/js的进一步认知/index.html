@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Welcome to my world">
 <meta property="og:description" content="循环语句for in循环专门用来遍历对象,对象有多少组属性，就循环几次 1234for(var key in obj)&amp;#123;    //key是一个变量，表示对象的属性名    //obj[key]:访问对象的属性值&amp;#125;  *如果对象中存在数字属性名，会优先按照数字升序遍历数字属性，其他的属性就按照定义的顺序遍历。 while循环 while  123456语法：     ①初始化循">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-01T13:13:16.225Z">
+<meta property="og:updated_time" content="2019-06-01T14:13:18.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js的进一步认知">
 <meta name="twitter:description" content="循环语句for in循环专门用来遍历对象,对象有多少组属性，就循环几次 1234for(var key in obj)&amp;#123;    //key是一个变量，表示对象的属性名    //obj[key]:访问对象的属性值&amp;#125;  *如果对象中存在数字属性名，会优先按照数字升序遍历数字属性，其他的属性就按照定义的顺序遍历。 while循环 while  123456语法：     ①初始化循">
@@ -190,11 +190,14 @@
 
 <p><strong>dowhile和while大部分情况是相同的效果，当初始条件不满足的时候，do while会先执行一次循环体。</strong></p>
 <ul>
-<li>break和continue <ul>
+<li><p>break和continue </p>
+<ul>
 <li>都是用来中止循环</li>
 <li>break: 结束整个循环</li>
 <li>continue:结束本轮循环，继续下一轮循环</li>
 </ul>
+<a id="more"></a>
+
 </li>
 </ul>
 <h3 id="批量绑定事件的问题"><a href="#批量绑定事件的问题" class="headerlink" title="批量绑定事件的问题"></a>批量绑定事件的问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var divs = document.getElementsByTagName(&apos;div&apos;);</span><br><span class="line">for(var i = 0; i &lt; divs.length; i++)&#123;</span><br><span class="line">    divs[i].onclick = function()&#123;</span><br><span class="line">        //事件处理函数里面不能再使用i，这里的i取到的值永远是循环结束后的i值</span><br><span class="line">        //this:事件处理函数里面的this指向的是当前触发事件的那个元素</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">? this能够找到触发事件的对象，但是我们还是没有解决获取不到 i 的问题？</span><br></pre></td></tr></table></figure>
