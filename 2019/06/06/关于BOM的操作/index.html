@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/6 | Welcome to my world</title>
+  <title>关于BOM的操作 | Welcome to my world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to my world">
-<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
+  <meta name="description" content="BOMBrowser Object Model，和我们浏览器的相关操作，都在BOM里面。  在前端、window属于全局的变量、global 全局变量、全局的函数都属于window  常用系统对话框 alert()：在页面弹出警告框 （window.alert()可以省略window）  就是单纯的弹出，没有返回值   console.log()：在控制台打印信息  在控制台输出，没有返回值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于BOM的操作">
+<meta property="og:url" content="http://yoursite.com/2019/06/06/关于BOM的操作/index.html">
 <meta property="og:site_name" content="Welcome to my world">
+<meta property="og:description" content="BOMBrowser Object Model，和我们浏览器的相关操作，都在BOM里面。  在前端、window属于全局的变量、global 全局变量、全局的函数都属于window  常用系统对话框 alert()：在页面弹出警告框 （window.alert()可以省略window）  就是单纯的弹出，没有返回值   console.log()：在控制台打印信息  在控制台输出，没有返回值">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-06T13:35:56.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to my world">
+<meta name="twitter:title" content="关于BOM的操作">
+<meta name="twitter:description" content="BOMBrowser Object Model，和我们浏览器的相关操作，都在BOM里面。  在前端、window属于全局的变量、global 全局变量、全局的函数都属于window  常用系统对话框 alert()：在页面弹出警告框 （window.alert()可以省略window）  就是单纯的弹出，没有返回值   console.log()：在控制台打印信息  在控制台输出，没有返回值">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to my world" type="application/atom+xml">
   
@@ -150,151 +154,308 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-关于BOM的操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      关于BOM的操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/关于BOM的操作/" class="archive-article-date">
+
+        
+        <a href="/2019/06/06/关于BOM的操作/" class="archive-article-date">
   	<time datetime="2019-06-06T13:34:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/关于BOM的操作/">关于BOM的操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p><code>Browser Object Model，和我们浏览器的相关操作，都在BOM里面。</code></p>
+<ul>
+<li>在前端、window属于全局的变量、global</li>
+<li>全局变量、全局的函数都属于window</li>
+</ul>
+<h3 id="常用系统对话框"><a href="#常用系统对话框" class="headerlink" title="常用系统对话框"></a>常用系统对话框</h3><ul>
+<li><p>alert()：在页面弹出警告框 （window.alert()可以省略window）</p>
+<ul>
+<li>就是单纯的弹出，没有返回值</li>
+</ul>
+</li>
+<li><p>console.log()：在控制台打印信息</p>
+<ul>
+<li>在控制台输出，没有返回值</li>
+</ul>
+</li>
+<li><p>confirm(‘是否重置’)：带确认的对话框</p>
+<ul>
+<li><p>返回boolean值，true：确定，false：取消</p>
+</li>
+<li><p>经常作为判断条件。</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if( confirm(&apos;你满18了吗？&apos;) )&#123;  confirm执行完得到的返回值做为if的判断条件</span><br><span class="line">		console.log(&apos;满18&apos;)</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		console.log(&apos;未成年&apos;)</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>prompt(‘title的提示信息’,’默认输入框的内容’)：带输入的对话框<ul>
+<li>确定：返回输入的内容</li>
+<li>取消：返回null</li>
+</ul>
+</li>
+</ul>
+<h3 id="窗口打开与关闭-了解"><a href="#窗口打开与关闭-了解" class="headerlink" title="窗口打开与关闭( 了解 )"></a>窗口打开与关闭( 了解 )</h3><ul>
+<li>起全局变量的时候，应该避开name。</li>
+<li>window.open( url,名字,窗口样式 ) 会返回一个新的window对象<ul>
+<li>默认新窗口打开 </li>
+<li>名字：_self当前页面  _blank 新窗口打开,我们可以给window窗口自己起名字<ul>
+<li>当我们指定_self、_blank以外的名字，作用：可以快速定位</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>window.close()</li>
+</ul>
+<h3 id="location地址栏对象"><a href="#location地址栏对象" class="headerlink" title="location地址栏对象  ****"></a>location地址栏对象  ****</h3><ul>
+<li><p><a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/dom_obj_location.asp</a></p>
+</li>
+<li><p>URL<br>URL（Uniform Resource Locator,统一资源定位符），它是WWW的统一资源定位标志，就是指网络地址。<br>protocol :// hostname[:port] / path / [;parameters][?query]#fragment</p>
+</li>
+<li><p><a href="http://nodejs.cn/api/url.html#url_url_strings_and_url_objects" target="_blank" rel="noopener">http://nodejs.cn/api/url.html#url_url_strings_and_url_objects</a></p>
+</li>
+<li><p><a href="http://www.aaa.com:8080/p/a/t/h/aaa.html?name=admin&amp;age=18#div1" target="_blank" rel="noopener">http://www.aaa.com:8080/p/a/t/h/aaa.html?name=admin&amp;age=18#div1</a></p>
+</li>
+<li><p><a href="http://www.ujiuye.com/" target="_blank" rel="noopener">http://www.ujiuye.com/</a></p>
+</li>
+<li><p>hash    设置或返回从井号 (#) 开始的 URL（锚）。  ***</p>
+</li>
+<li><p>host    设置或返回主机名和当前 URL 的端口号。</p>
+</li>
+<li><p>hostname    设置或返回当前 URL 的主机名。</p>
+</li>
+<li><p>href    设置或返回完整的 URL。                     ***</p>
+</li>
+<li><p>pathname    设置或返回当前 URL 的路径部分。</p>
+</li>
+<li><p>port    设置或返回当前 URL 的端口号。</p>
+</li>
+<li><p>protocol    设置或返回当前 URL 的协议。</p>
+</li>
+<li><p>search    设置或返回从问号 (?) 开始的 URL（查询部分）。   ***</p>
+</li>
+<li><p>总结</p>
+<ul>
+<li>使用 hash和search都能实现页面与页面之间传参数</li>
+<li>如果只需要传一个参数，hash足够，比如我们刚讲的 展示图片</li>
+<li>如果需要传多个参数，使用search ? 依赖之前的 strtoobj()</li>
+</ul>
+</li>
+</ul>
+<h3 id="navigator-浏览器信息对象"><a href="#navigator-浏览器信息对象" class="headerlink" title="navigator  浏览器信息对象  ****"></a>navigator  浏览器信息对象  ****</h3><ul>
+<li>内核</li>
+<li>版本</li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/dom_obj_navigator.asp</a></li>
+<li>appVersion 返回浏览器的平台和版本信息。</li>
+<li>userAgent</li>
+<li>用途<ol>
+<li>判断IE</li>
+<li>判断IE版本</li>
+<li>判断PC端移动端进行页面跳转<br>appVersion: “5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)<br>appVersion: “5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/60</li>
+</ol>
+</li>
+</ul>
+<h3 id="history-历史记录对象-（了解）"><a href="#history-历史记录对象-（了解）" class="headerlink" title="history 历史记录对象  （了解）"></a>history 历史记录对象  （了解）</h3><ul>
+<li>go(number)往前走</li>
+<li>back(number)往回走</li>
+</ul>
+<h3 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h3><ul>
+<li>超链接 href=”url”</li>
+<li>form表单 action=”url”</li>
+<li>window.open(url)</li>
+<li>location.href = url</li>
+</ul>
+<h2 id="各种宽和高"><a href="#各种宽和高" class="headerlink" title="各种宽和高"></a>各种宽和高</h2><h3 id="client"><a href="#client" class="headerlink" title="client"></a>client</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可视宽或高</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>元素.clientWidth：获取元素的可视宽高  (width+左右的padding)</li>
+<li>元素.clientHeight：获取元素的可视宽高  (height+左右的padding)</li>
+<li>元素.clientTop：上边框</li>
+<li>元素.clientLeft：左边框<br>getStyle()</li>
+<li>document.documentElement.clientWidth：获取屏幕的可视宽</li>
+<li>document.documentElement.clientHeight：获取屏幕的可视高</li>
+</ul>
+<h3 id="offset"><a href="#offset" class="headerlink" title="offset"></a>offset</h3><ul>
+<li>元素.offsetWidth :  获取元素的占位宽（width+padding+border）</li>
+<li>元素.offsetHeight :  获取元素的占位高（height+padding+border）</li>
+<li>元素.offsetTop: 当前元素的顶部，到定位父元素的距离，没有定位父元素， 到body的距离</li>
+<li>元素.offsetLeft: 当前元素的左边，到定位父元素的距离，没有定位父元素，到body的距离</li>
+</ul>
+<h3 id="scroll"><a href="#scroll" class="headerlink" title="scroll"></a>scroll</h3><ul>
+<li><p>元素.scrollTop : 获取元素被卷去的高</p>
+</li>
+<li><p>元素.scrollLeft：获取元素被卷去的宽</p>
+</li>
+<li><p>元素.scrollWidth :  获取元素实际内容宽</p>
+</li>
+<li><p>元素.scrollHeight :  获取元素实际内容高</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 模拟自定义滚动条的思想</span><br><span class="line">实际内容的高-元素的可视高 = 最大的top值</span><br><span class="line">	//oDiv2.style.top = oDiv1.scrollHeight - oDiv1.clientHeight</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>document.documentElement.scrollTop || document.body.scrollTop：获取页面被卷去的高 === 滚动条滚动的距离 <ul>
+<li>document.body.scrollTop   老版本的谷歌浏览器<br>“Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0”<br>“Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36”</li>
+</ul>
+</li>
+</ul>
+<h3 id="window-事件"><a href="#window-事件" class="headerlink" title="window 事件"></a>window 事件</h3><ul>
+<li>onscroll  滚动条事件</li>
+<li>onload</li>
+<li>onresize  窗口改变大小触发的事项</li>
+</ul>
+<h2 id="封装位置"><a href="#封装位置" class="headerlink" title="封装位置"></a>封装位置</h2><ul>
+<li>循环计算出每一个有相对父元素的相对距离，直到body</li>
+</ul>
+<h2 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h2><ul>
+<li>减少网页的请求次数（雪碧图）（懒加载）</li>
+<li>css放到head里面</li>
+<li>js 放尾部body的前面</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/06/关于BOM的操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/关于DOM的操作/" class="archive-article-date">
-  	<time datetime="2019-06-06T13:23:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/06/关于DOM的操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于DOM的操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/关于DOM的操作/">关于DOM的操作</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/02/函数小结/" class="archive-article-date">
-  	<time datetime="2019-06-02T14:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/02/函数小结/">函数小结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/01/js的进一步认知/" class="archive-article-date">
-  	<time datetime="2019-06-01T13:09:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/01/js的进一步认知/">js的进一步认知</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/01/js的认识/" class="archive-article-date">
-  	<time datetime="2019-06-01T12:53:08.934Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -317,8 +478,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

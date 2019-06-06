@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/6 | Welcome to my world</title>
+  <title>关于DOM的操作 | Welcome to my world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to my world">
-<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
+  <meta name="description" content="DOM 节点之间的关系  我们通过节点这个概念获取的元素，都是Object类型  节点类型  nodeType  元素节点  1 属性节点  2 文本节点  3   nodeName  要有兼容的意识   获取子节点  childNodes 标准属性 children 非标准属性（只获取元素类型的子节点）   获取节点当中的文本内容  nodeValue   文本  textContent  元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于DOM的操作">
+<meta property="og:url" content="http://yoursite.com/2019/06/06/关于DOM的操作/index.html">
 <meta property="og:site_name" content="Welcome to my world">
+<meta property="og:description" content="DOM 节点之间的关系  我们通过节点这个概念获取的元素，都是Object类型  节点类型  nodeType  元素节点  1 属性节点  2 文本节点  3   nodeName  要有兼容的意识   获取子节点  childNodes 标准属性 children 非标准属性（只获取元素类型的子节点）   获取节点当中的文本内容  nodeValue   文本  textContent  元素">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-06T13:34:35.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to my world">
+<meta name="twitter:title" content="关于DOM的操作">
+<meta name="twitter:description" content="DOM 节点之间的关系  我们通过节点这个概念获取的元素，都是Object类型  节点类型  nodeType  元素节点  1 属性节点  2 文本节点  3   nodeName  要有兼容的意识   获取子节点  childNodes 标准属性 children 非标准属性（只获取元素类型的子节点）   获取节点当中的文本内容  nodeValue   文本  textContent  元素">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to my world" type="application/atom+xml">
   
@@ -150,151 +154,325 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于DOM的操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/关于BOM的操作/" class="archive-article-date">
-  	<time datetime="2019-06-06T13:34:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/关于BOM的操作/">关于BOM的操作</a>
+    <h1 class="article-title" itemprop="name">
+      关于DOM的操作
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/关于DOM的操作/" class="archive-article-date">
+        
+        <a href="/2019/06/06/关于DOM的操作/" class="archive-article-date">
   	<time datetime="2019-06-06T13:23:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/关于DOM的操作/">关于DOM的操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><ul>
+<li><p>节点之间的关系</p>
+</li>
+<li><p>我们通过节点这个概念获取的元素，都是Object类型</p>
+</li>
+<li><p>节点类型  nodeType</p>
+<ul>
+<li>元素节点  1</li>
+<li>属性节点  2</li>
+<li>文本节点  3</li>
+</ul>
+</li>
+<li><p>nodeName</p>
+<ul>
+<li>要有兼容的意识</li>
+</ul>
+</li>
+<li><p>获取子节点</p>
+<ul>
+<li>childNodes 标准属性</li>
+<li>children 非标准属性（只获取元素类型的子节点）</li>
+</ul>
+</li>
+<li><p>获取节点当中的文本内容</p>
+<ul>
+<li><p>nodeValue   文本</p>
+</li>
+<li><p>textContent  元素和文本</p>
+</li>
+<li><p>innerText</p>
+</li>
+<li><p>innerHTML</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>只有对象才有属性</li>
+<li>自带属性和自定义属性</li>
+<li>自带属性可以通过js的点语法，直接获取，带是自定义属性（如果在元素标签上直接添加的自定义属性，我们之前的点语法是不能获取的）</li>
+<li>元素对象.getAttributeNode(属性名) 属性节点| 对象类型（ 了解 ）<br>返回的对象.nodeValue 获取属性值<ul>
+<li>btn1.getAttribute(‘ccc’)  和点语法作用一模一样，返回字符串值，但是能获取标签上的自定义属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="父节点及相对父节点"><a href="#父节点及相对父节点" class="headerlink" title="父节点及相对父节点"></a>父节点及相对父节点</h3><ul>
+<li>parentNode === getElementById</li>
+<li>offsetParent : 最近的相对父元素，如果一直没找到，则返回的是body<br>父元素上有 position:relative|absolute|fixed</li>
+</ul>
+<h3 id="其它节点"><a href="#其它节点" class="headerlink" title="其它节点"></a>其它节点</h3><ul>
+<li>firstChild | firstElementChild<ul>
+<li>firstChild 在标准浏览器当中能够获取文本节点也能获取到元素节点，在IE低版本下只获取元素节点<br>如果就想获取元素节点，不能使用此方法获取，应该使用firstElementChild</li>
+<li>firstElementChild 在标准浏览器当中只能获取到元素节点，在IE低版本下无此属性 (undefined)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lastChild/lastElementChild：最后一个子元素/子节点</span><br><span class="line">nextSibling/nextElementSibling：下一个元素/节点</span><br><span class="line">previousSibling/previousSibling：前一个元素/节点</span><br><span class="line">firstChild标准浏览器会获取到折行，firstElementChild是专门解决这个问题的，但是两者不能共用。</span><br><span class="line">兼容：父元素.firstElementChild || 父元素.firstChild</span><br></pre></td></tr></table></figure>
 
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="属性节点操作"><a href="#属性节点操作" class="headerlink" title="属性节点操作"></a>属性节点操作</h3><ul>
+<li>属性节点操作<ul>
+<li>读== 获取   元素.getAttribute( attrName )</li>
+<li>设置（赋值） | 修改<br>元素.setAttribute( attrName,value )</li>
+<li>删除<br>元素.removeAttribute( attrName )</li>
+</ul>
+</li>
+<li>属性不会在页面上渲染  ，标签当中的内容才会被渲染</li>
+<li>属性给开发者用的，</li>
+</ul>
+<h3 id="元素节点操作（都是依赖于父元素）"><a href="#元素节点操作（都是依赖于父元素）" class="headerlink" title="元素节点操作（都是依赖于父元素）"></a>元素节点操作（都是依赖于父元素）</h3><ul>
+<li><p>创建元素节点</p>
+<ul>
+<li>document.createElement( ‘标签名’ )=&gt; 节点对象（元素对象）=== ById</li>
+<li>通过createElement创建的元素，可以添加事件、设置样式</li>
+<li>createTextNode(‘文本内容’) 创建文本节点</li>
+</ul>
+</li>
+<li><p>添加子元素（往父元素内部末尾追加）</p>
+<ul>
+<li>parentNode.appendChild( 节点对象[不是字符串] )</li>
+</ul>
+<p>元素.innerHTML+=’<li></li>‘</p>
+<p>var str = ‘’<br>str+=’<li></li>‘
+元素.innerHTML = str</p>
+</li>
+<li><p>在元素之前追加元素</p>
+<ul>
+<li>parentNode.insertBefore(新节点,参考节点)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if( list.children[0] )&#123;</span><br><span class="line">	list.insertBefore( oLi,list.children[0] )</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	list.appendChild( oLi )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除元素<ul>
+<li>deleNode.remove() IE兼容性问题</li>
+<li>父元素.removeChild( removeChildNode ) 没有兼容性问题</li>
+</ul>
+</li>
+<li>替换元素<ul>
+<li>父元素.replaceChild( 新的节点,参考节点 )</li>
+</ul>
+</li>
+<li>克隆元素<ul>
+<li>被克隆的元素.cloneNode( boolean )  </li>
+<li>true|false   默认为false，只复制标签，true则复制内容及后代</li>
+</ul>
+</li>
+<li>这些方法都可以操作页面当中已有的元素，只不过是剪切操作</li>
+</ul>
+<h2 id="html5在js当中新增的两个选元素的方法"><a href="#html5在js当中新增的两个选元素的方法" class="headerlink" title="html5在js当中新增的两个选元素的方法"></a>html5在js当中新增的两个选元素的方法</h2><ul>
+<li>document.querySelector( selector )  只选择一个 只选择页面当中第一个符合的元素</li>
+<li>document.querySelectorAll( selector ) 选择所有符合css规则的元素<br><code>注意：如果不考虑ie8以下浏览器，完全可以使用。如果在移动端完全可以使用</code></li>
+<li>document.getElementsByClassName( className ) 也有兼容性问题</li>
+</ul>
+<h2 id="表格操作"><a href="#表格操作" class="headerlink" title="表格操作"></a>表格操作</h2><h3 id="获取表格当中的元素-了解"><a href="#获取表格当中的元素-了解" class="headerlink" title="获取表格当中的元素 ( 了解 )"></a>获取表格当中的元素 ( 了解 )</h3><ul>
+<li>表格.tHead : 获取表格thead</li>
+<li>表格.tFoot : 获取表格tfoot</li>
+<li>表格.tBodies : 获取表格tbody，获取到的是个元素集合，需要同[]获取</li>
+<li>表格.rows：获取整个表格tr</li>
+<li>表格.tBodies[0].rows：获取body中的tr</li>
+<li>表格.rows[0].cells ：获取单元格，单元格必须通过行获取</li>
+</ul>
+<p>document.div</p>
+<h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><ul>
+<li><p>获取表单的元素<br>当我们需要所数据传到另一个页面的时候，必须把表单写完整</p>
+<ol>
+<li>需要form表单元素</li>
+<li>哪个表单元素关心value，则在哪个表单元素上添加name属性</li>
+<li>在一个表单当中，name名称不能重复</li>
+</ol>
+<p>表单对象.name</p>
+</li>
+<li><p>表单事件</p>
+<ul>
+<li>onsubmit 表单提交事件 <ul>
+<li>普通按钮，不会触发onsubmit事件，type类型为submit的按钮才会触发表单提交事件</li>
+<li>当点击type=’submit’的按钮，表单自动跳转（这个状态|这个行为称为浏览器中元素的默认行为）</li>
+<li>如果我想阻止默认行为，就在触发此事件的事件函数中 最后面添加  return false</li>
+<li>formObj.onsubmit = fun</li>
+</ul>
+</li>
+<li>oForm.onreset : 表单重置时调用<ul>
+<li>type类型为reset的按钮才会触发表单提交事件</li>
+</ul>
+</li>
+<li>input.onfocus : 获得焦点</li>
+<li>input.onblur  失去焦点</li>
+</ul>
+</li>
+<li><p>表单提供的一些方法（函数）    </p>
+<ul>
+<li>oForm.submit() :表单提交方法</li>
+<li>oForm.reset()： 表单重置方法</li>
+<li>input.focus()：获取焦点</li>
+<li>input.blur(): 失去焦点</li>
+<li>input.select()：选择表单元素中的文本内容方法</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/06/关于DOM的操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/02/函数小结/" class="archive-article-date">
-  	<time datetime="2019-06-02T14:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/06/06/关于BOM的操作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于BOM的操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/02/函数小结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数小结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/02/函数小结/">函数小结</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/01/js的进一步认知/" class="archive-article-date">
-  	<time datetime="2019-06-01T13:09:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/01/js的进一步认知/">js的进一步认知</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/01/js的认识/" class="archive-article-date">
-  	<time datetime="2019-06-01T12:53:08.934Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -317,8 +495,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
