@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/6 | Welcome to my world</title>
+  <title>ajax的认知 | Welcome to my world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to my world">
-<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
+  <meta name="description" content="ajax技术 封装一个ajax（不要求你会封装），ajax原理需要懂 ajax是干什么 你会用我封装ajax这个函数 在jquery当中有现在的封装好的ajax方法 4阶段学习框架的时候，框架里面都有集成好的ajax方法 理解程序中的异步和同步  使用ajax注意事项 ajax需要依赖服务器环境（安装的phpstudy集成了服务器环境，运行phpstudy） 项目当中哪些地方可以使用ajax？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax的认知">
+<meta property="og:url" content="http://yoursite.com/2019/06/24/ajax的认知/index.html">
 <meta property="og:site_name" content="Welcome to my world">
+<meta property="og:description" content="ajax技术 封装一个ajax（不要求你会封装），ajax原理需要懂 ajax是干什么 你会用我封装ajax这个函数 在jquery当中有现在的封装好的ajax方法 4阶段学习框架的时候，框架里面都有集成好的ajax方法 理解程序中的异步和同步  使用ajax注意事项 ajax需要依赖服务器环境（安装的phpstudy集成了服务器环境，运行phpstudy） 项目当中哪些地方可以使用ajax？">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-24T06:42:05.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to my world">
+<meta name="twitter:title" content="ajax的认知">
+<meta name="twitter:description" content="ajax技术 封装一个ajax（不要求你会封装），ajax原理需要懂 ajax是干什么 你会用我封装ajax这个函数 在jquery当中有现在的封装好的ajax方法 4阶段学习框架的时候，框架里面都有集成好的ajax方法 理解程序中的异步和同步  使用ajax注意事项 ajax需要依赖服务器环境（安装的phpstudy集成了服务器环境，运行phpstudy） 项目当中哪些地方可以使用ajax？">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to my world" type="application/atom+xml">
   
@@ -150,232 +154,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ajax的认知" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      ajax的认知
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/24/ajax的认知/" class="archive-article-date">
+
+        
+        <a href="/2019/06/24/ajax的认知/" class="archive-article-date">
   	<time datetime="2019-06-24T06:39:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/24/ajax的认知/">ajax的认知</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ajax技术"><a href="#ajax技术" class="headerlink" title="ajax技术"></a>ajax技术</h2><ul>
+<li>封装一个ajax（不要求你会封装），ajax原理需要懂</li>
+<li>ajax是干什么</li>
+<li>你会用我封装ajax这个函数</li>
+<li>在jquery当中有现在的封装好的ajax方法</li>
+<li>4阶段学习框架的时候，框架里面都有集成好的ajax方法</li>
+<li>理解程序中的异步和同步</li>
+</ul>
+<h3 id="使用ajax注意事项"><a href="#使用ajax注意事项" class="headerlink" title="使用ajax注意事项"></a>使用ajax注意事项</h3><ul>
+<li>ajax需要依赖服务器环境（安装的phpstudy集成了服务器环境，运行phpstudy）</li>
+<li>项目当中哪些地方可以使用ajax？</li>
+</ul>
+<h3 id="详解ajax流程"><a href="#详解ajax流程" class="headerlink" title="详解ajax流程"></a>详解ajax流程</h3><ol>
+<li>二狗子和他另一半去民政局领结婚证（二狗子和另一半是具体的对象ajax）。民政局（坐班的小姐姐）相当于服务器  【new 对象】</li>
+<li>对象是（二狗子和他另一半）目标（民政局坐班的小姐姐），网络请求（有时间限制）</li>
+<li>真正要去啊？（走着？跑着？拉着小手开着宝马去？）【send() 】</li>
+<li>民政局得有响应啊？<br>挂个号。等啊？前面100对儿。50对儿？…<br>去窗口验证。<br>4.1 先填表吧，如何填在哪儿填？（ 1. 窗口填 【一直等，等上一个办理完，才能办理下一对，浪费时间】 2. 在窗口填的那些人正在办理，其它人没在窗口位置可以先把表给填了啊。）。<br>第2种情况，就是现实中的同步走。<br>而在程序中，异步是现实中的同步。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在程序中 ajax.readyState == 4只是代表这件事情做过了，不代表成功了。</span><br><span class="line">	ajax.status == 200的时候，才代表这件事情请求成功了。</span><br><span class="line">	而ajax天生就是做异步的，也就是说在使用ajax请求的时候，不请求鼠标的其它操作。</span><br><span class="line">传统的网页请求，没有请求完成，一定是正在加载。</span><br><span class="line">ajax请求，你看不出来页面正在刷新。</span><br><span class="line">网站中哪里都用到了ajax</span><br><span class="line">股票网站、直播、聊天。实时更新的功能都可以使用ajax（ 无需整个页面加载 ）</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<a id="more"></a>
 
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//1. 创建一个ajax对象，是一个浏览器 </span><br><span class="line">var ajax = new XMLHttpRequest()//全局函数，创建一个ajax对象 ,IE6不支持</span><br><span class="line">//2. 告诉ajax请求哪个地址</span><br><span class="line">ajax.open(&apos;get&apos;,&apos;a.txt&apos;,true)</span><br><span class="line">//3. 使用ajax主动发送请求</span><br><span class="line">ajax.send()//</span><br><span class="line">//4. 有请求必然有响应。</span><br><span class="line">ajax.onreadystatechange = function () &#123;//</span><br><span class="line">	if( ajax.readyState == 4 ) &#123;</span><br><span class="line">		if( ajax.status == 200 )&#123;//</span><br><span class="line">			console.log( ajax.responseText )//  ajax.responseText 请求文件的结果</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="又讲回调函数"><a href="#又讲回调函数" class="headerlink" title="又讲回调函数"></a>又讲回调函数</h3><ul>
+<li>在ajax中只有状态码为200的时候（成功的条件），要做的事情，成功的回调函数</li>
+<li>失败了要做的事情，则是失败的回调</li>
+<li>而且我们使用ajax请求，一定（100%）你一定要写成功要做的事情（不写成功要做的事情就不符合我们的要求）。。而且一定一定不是return出来这个结果。</li>
+</ul>
+<h3 id="json字符串与对象"><a href="#json字符串与对象" class="headerlink" title="json字符串与对象"></a>json字符串与对象</h3><ul>
+<li><p>对象 Object| new {}</p>
+<p>{</p>
+<pre><code>a:&apos;abc&apos;</code></pre><p>}</p>
+</li>
+</ul>
+<p>“{a:’123’}”</p>
+<ul>
+<li>json字符串|string.</li>
+</ul>
+<p>var json = ‘{“a”: “Hello”, “b”: “World”}’; //这是一个 JSON 字符串，本质是一个字符串<br>    严格的json字符串协议是？  属性必须是双绰号，属性对应的value值如果是字符串类型也必须是双引号。而且json字符串中就不应该有函数类型的数据。<br>    99%的情况 json字符串中的数据（字符串、数值、布尔值）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var json = &apos;&#123;&quot;s&quot;:&quot;abcd&quot;,&quot;n&quot;:18,&quot;b&quot;:&quot;true&quot;&#125;&apos;</span><br></pre></td></tr></table></figure>
+
+<p>json字符串有两种形式<br>     一种是纯花括号<br>     另一种可以是数组形式’[{“s”:”abcd”,”n”:18,”b”:”true”},{“s”:”abcd”,”n”:18,”b”:”true”}]’<br>     ‘[11,22,33]’</p>
+<h2 id="JSON-js的内置对象-和Math对象的形式很相似"><a href="#JSON-js的内置对象-和Math对象的形式很相似" class="headerlink" title="JSON js的内置对象 和Math对象的形式很相似"></a>JSON js的内置对象 和Math对象的形式很相似</h2><ul>
+<li>JSON.parse: 把json字符串转换成对象</li>
+<li>JSON.stringify：把对象转换成json字符串</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;result&quot;:</span><br><span class="line">	[</span><br><span class="line">		&#123;&quot;name&quot;:&quot;ujiuye&quot;,&quot;age&quot;:18&#125;,</span><br><span class="line">		&#123;&quot;name&quot;:&quot;ujiuye&quot;,&quot;age&quot;:18&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/24/ajax的认知/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/24/cookie、正则、面向对象的理解/" class="archive-article-date">
-  	<time datetime="2019-06-24T06:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/24/cookie、正则、面向对象的理解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cookie、正则、面向对象的理解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/24/cookie、正则、面向对象的理解/">cookie、正则、面向对象的理解</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/24/关于js中事件的小小总结/" class="archive-article-date">
-  	<time datetime="2019-06-24T06:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/24/关于js中事件的小小总结/">关于js中事件的小小总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/关于BOM的操作/" class="archive-article-date">
-  	<time datetime="2019-06-06T13:34:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/关于BOM的操作/">关于BOM的操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/关于DOM的操作/" class="archive-article-date">
-  	<time datetime="2019-06-06T13:23:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/关于DOM的操作/">关于DOM的操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/02/函数小结/" class="archive-article-date">
-  	<time datetime="2019-06-02T14:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/02/函数小结/">函数小结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/01/js的进一步认知/" class="archive-article-date">
-  	<time datetime="2019-06-01T13:09:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/01/js的进一步认知/">js的进一步认知</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/01/js的认识/" class="archive-article-date">
-  	<time datetime="2019-06-01T12:53:08.934Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -398,8 +374,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
