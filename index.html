@@ -172,99 +172,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="jquery"><a href="#jquery" class="headerlink" title="jquery"></a>jquery</h2><p>jquery就是由原生js封装出来的一个方法（函数）库而已，封装的思想为面向对象思想<br><img src="http://www.jq22.com/" alt="jq22插件库"></p>
+        <h2 id="jquery简介"><a href="#jquery简介" class="headerlink" title="jquery简介"></a>jquery简介</h2><p>jquery就是由原生js封装出来的一个方法（函数）库而已，封装的思想为面向对象思想</p>
 <p><code>传统的概念</code>：无论PC、mobile端的网站 ，在开发界面的时候，不使用任何框架（ vue、react、angular.js ）<br>而且传统的网站开发，我们写特效的时候，操作DOM是必不可少的。而且我们使用原生js选元素是非常麻烦的。所以在06年时候 jquery出现了（最初解决选元素的问题） 只要会css，你就会使用jquery选元素。</p>
 <ul>
 <li>传统的PC端网页开发</li>
 <li>传统的移动端网页开发</li>
 </ul>
 <p>经过这几年的更新迭代，开发者|架构师也越来越觉得 页面与数据分开会更好（ 后端只给前端数据【json】 ）这种技术就叫spa（ single page aplication ）而且越来越少的操作DOM元素了。</p>
-<h3 id="jquery简介"><a href="#jquery简介" class="headerlink" title="jquery简介"></a>jquery简介</h3><p>jQuery是一个快速，小巧，功能丰富的JavaScript库。它通过易于使用的API在大量浏览器中运行，使得HTML文档遍历和操作，事件处理，动画和Ajax变得更加简单。通过多功能性和可扩展性的结合，jQuery改变了数百万人编写JavaScript的方式。</p>
+<h3 id="认识"><a href="#认识" class="headerlink" title="认识"></a>认识</h3><p>jQuery是一个快速，小巧，功能丰富的JavaScript库。它通过易于使用的API在大量浏览器中运行，使得HTML文档遍历和操作，事件处理，动画和Ajax变得更加简单。通过多功能性和可扩展性的结合，jQuery改变了数百万人编写JavaScript的方式。</p>
 <ul>
 <li>只不过是一个工具</li>
 <li>逻辑思想我还还得有</li>
 <li>使用工具的原则是 提高我们的开发效率的。</li>
 </ul>
-<h3 id="使用jquery"><a href="#使用jquery" class="headerlink" title="使用jquery"></a>使用jquery</h3><p>两种写法</p>
-<ol>
-<li>$( css形式的选择器 ).action()  选择元素以后要干嘛</li>
-<li>$.工具方法()  不操作元素（不操作DOM）<br>$.isArray()</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new Date()// 时间对象</span><br><span class="line">new RegExp()  // 正则对象</span><br><span class="line">new Person() //person对象</span><br></pre></td></tr></table></figure>
-
-<p>/*
-jquery的原型上的方法，只能是实例出来的对象使用（也就是说使用 $()选择的元素才能 <code>点</code> 操作 ）<br> */<br>var r = $( ‘button’ )  //-&gt; 返回的是一个jquery对象，前面不用写new<br>console.log( typeof r )//object</p>
-<h2 id="jQuery对象与DOM对象"><a href="#jQuery对象与DOM对象" class="headerlink" title="jQuery对象与DOM对象"></a>jQuery对象与DOM对象</h2><ul>
-<li>jQuery： 就是通过jQuery包装DOM对象后产生的对象。<br>jQuery对象是jQuery独有的。如果一个对象是jQuery对象，那么就可以使用jQuery中的原型上的方法</li>
-<li>DOM对象：通过原生方法得到的DOM元素就是DOM对象<br>DOM对象可以使用javascript中的方法</li>
-</ul>
-<p>可以同时存在，但是不能滥用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"></span><br><span class="line">错误的写法</span><br><span class="line">bts[1].css()</span><br><span class="line">$(&apos;button&apos;).innerHTML = 123</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-
-<h3 id="jquery的方法函数化"><a href="#jquery的方法函数化" class="headerlink" title="jquery的方法函数化"></a>jquery的方法函数化</h3><p>当我想要使用某个功能，基本上jquery上一定有一个函数供我们调用。</p>
-<h2 id="TeleportUltra的使用"><a href="#TeleportUltra的使用" class="headerlink" title="TeleportUltra的使用"></a>TeleportUltra的使用</h2><h2 id="jQuery使用的时候-冲突的问题解决"><a href="#jQuery使用的时候-冲突的问题解决" class="headerlink" title="jQuery使用的时候, $冲突的问题解决"></a>jQuery使用的时候, $冲突的问题解决</h2><p>/*
-使用匿名函数 + jQuery.noConflict()<br> */</p>
-<p>jQuery.noConflict()//把全局下的 jQuery中的$ 给销毁</p>
-<p>;(function ( $ ) {</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//console.log( $,&apos;我是函数内部的&apos; )</span><br><span class="line">$(&apos;button&apos;).css(&apos;background&apos;,&apos;blue&apos;)</span><br></pre></td></tr></table></figure>
-
-<p>})( jQuery )</p>
-<h2 id="页面加载问题"><a href="#页面加载问题" class="headerlink" title="页面加载问题"></a>页面加载问题</h2><p> 原生：window.onload = function() {}<br>jquery： $(document).ready(function() {})<br>                   $().ready(function() {})<br>                   $(function() {});<br>区别：<br>执行时机：原生的必须等待网页中所有的内容加载完毕后（包括图片）才能执行。而jQuery是网页中所有DOM结构绘制完毕后就执行，可能DOM元素关联的东西并没有加载完<br>编写个数：原生的只通写一个，而jQuery的可以编写多个。</p>
-<h3 id="jquery的链式操作"><a href="#jquery的链式操作" class="headerlink" title="jquery的链式操作"></a>jquery的链式操作</h3><p>只要返回jquery对象，就一直能够 点下去</p>
-<h3 id="jquery当中的事件绑定"><a href="#jquery当中的事件绑定" class="headerlink" title="jquery当中的事件绑定"></a>jquery当中的事件绑定</h3><p>$(元素).click(function(){</p>
-<p>})</p>
-<h2 id="强大的选择器"><a href="#强大的选择器" class="headerlink" title="强大的选择器"></a>强大的选择器</h2><h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><p>//$(‘标签名’)  帮我们省略了迭代（循环）<br>$(‘p’).css(‘background’,’red’)</p>
-<p>//$(‘.class名’)<br>$(‘.abc’).css(‘background’,’blue’)</p>
-<p>//$(‘#ID名’)<br>$(‘#div1’).css(‘background’,’pink’)</p>
-<div class="a">
-    <div class="b">
-        <div class="c">
-            <div class="d">
-                <div class="e">eeee</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<p>$(‘#div a b c d’)</p>
-<h3 id="层次选择器"><a href="#层次选择器" class="headerlink" title="层次选择器"></a>层次选择器</h3><ul>
-<li>$(‘a b’)：获取a元素的后代元素b</li>
-<li>$(‘a&gt;b’)：获取a元素的直接后代元素b</li>
-<li>$(‘a+b’)：获取紧跟在a元素后面的b元素，next()方法一样的效果</li>
-<li>$(‘a~b’)：获取a元素后面的所有b元素，nextAll() 方法一样的效果</li>
-<li>prev()：返回上一个兄弟节点，不是所有的兄弟节点  ||  next()<br>使用prev和next就不要传参，没有意义 ,一定是紧挨着</li>
-<li>prevAll(选择器)：返回所有之前的兄弟节点  ||  nextAll</li>
-<li>siblings(选择器)：返回兄弟姐妹节点，不分前后</li>
-</ul>
-<h3 id="基本的过滤选择器"><a href="#基本的过滤选择器" class="headerlink" title="基本的过滤选择器"></a>基本的过滤选择器</h3><ul>
-<li>$(‘li:first’)：获取第一个li元素</li>
-<li>$(‘li:last’)：获取最后一个li元素</li>
-<li>$(‘li:not(.box)’)：获取所有的li，除了class名为box的</li>
-<li>$(‘li:even’)：获取索引为偶数的li元素</li>
-<li>$(‘li:odd’)：获取索引为奇数的li元素</li>
-<li>$(‘li:eq(2)’)：获取索引值为2的li元素</li>
-<li>$(‘li:gt(2)’)：获取索引大于2的li元素</li>
-<li>$(‘li:lt(2)’)：索引小于2的li元素- </li>
-</ul>
-<h3 id="jquery当中的循环"><a href="#jquery当中的循环" class="headerlink" title="jquery当中的循环"></a>jquery当中的循环</h3><ul>
-<li>$.each(对象, function (下标, 当前项){}); // 可以针对原生，也可以针对jQuery对象<br>第二个参数是一个函数，这个函数有两个参数，一个是下标，一个是当前项，这个函数中的this也即当前项</li>
-<li>jQuery对象.each(function (下标, 当前项){});  只能针对jQuery对象<br>该方法用于循环jQuery对象，这个方法接收一个函数做为参数，这个函数的有两个参数第一个参数为下标，第二个参数为项，这个函数中的this即项</li>
-</ul>
-<h3 id="选项卡"><a href="#选项卡" class="headerlink" title="选项卡"></a>选项卡</h3><ul>
-<li>this</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">	$(&apos;button&apos;).click(function () &#123;</span><br><span class="line">	console.log(123)</span><br><span class="line">	console.log( this )//原生DOM 对象</span><br><span class="line">	//this.style.background = &apos;red&apos;</span><br><span class="line">	$(this).css(&apos;background&apos;,&apos;yellow&apos;)// $(this)//jquery对象</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>hide()<br>隐藏</li>
-<li>show()<br>显示</li>
-<li>parent|next|prev<br>获取父元素</li>
-<li>index<br>获取元素所在兄弟中的索引位置</li>
-<li>addClass<br>添加class</li>
-<li>removeClass<br>移除class</li>
-<li>children(选择器)<br>选择子元素</li>
-</ul>
-
+        
+          <!-- <a class="article-more-a" href="/2019/06/24/juery基本知识点汇总/#more">more >></a> -->
+        
       
 
       
